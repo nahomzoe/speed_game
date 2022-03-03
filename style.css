@@ -33,17 +33,9 @@ h2 {
   background-color: tomato;
   margin: 1rem;
   border-radius: 50%;
-  cursor: pointer;
+  pointer-events: none;
 }
-.circle:hover {
-  width: 150px;
-  height: 150px;
-  background-color: rgb(46, 47, 163);
-  margin: 1rem;
-  display: inline-block;
-  border-radius: 50%;
-  cursor: pointer;
-}
+
 .circle.active {
   background-color: yellow;
 }
@@ -86,4 +78,7 @@ button {
 }
 #result {
   font-size: 1.5rem;
+}
+#stop {
+  display: none;
 }
