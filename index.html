@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,700;1,100;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Speed game</title>
+  </head>
+  <body>
+    <section>
+      <h1>Speedgame</h1>
+
+      <div class="gamearea">
+        <h2>Your score is: <span id="score">0</span></h2>
+        <div class="fourCircle">
+          <div class="circle fist">1</div>
+          <div class="circle second">2</div>
+          <div class="circle third">3</div>
+          <div class="circle forth">4</div>
+        </div>
+        <button type="button">Start game</button>
+        <button type="button">Stop game</button>
+      </div>
+    </section>
+    <section id="overlay">
+      <div class="modal">
+        <p>Game Over!</p>
+        <p id="result">fghdfhdfgdf</p>
+        <button type="button" id="close">close</button>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
