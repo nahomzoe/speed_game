@@ -48,7 +48,7 @@ const startGame = () => {
   timer = setTimeout(startGame, pace);
   pace = pace - 10;
 
-  if (rounds >= 1) {
+  if (rounds >= 5) {
     endGame();
   }
   rounds++;
@@ -81,6 +81,33 @@ const reloadGame = () => {
   window.location.reload();
 };
 
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function () {
+    this.sound.play();
+  };
+  this.stop = function () {
+    this.sound.pause();
+  };
+}
+const startGameMusic = () => {
+  startSound = new sound("/start.wav");
+  startSound.play();
+};
+
+const endGameMusic = () => {
+  endSound = new sound("/end.wav");
+  startSound.stop();
+  endSound.play();
+};
+
 startButton.addEventListener("click", startGame);
+startButton.addEventListener("click", startGameMusic);
 endButton.addEventListener("click", endGame);
+endButton.addEventListener("click", endGameMusic);
 closeButton.addEventListener("click", reloadGame);
